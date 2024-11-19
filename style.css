@@ -86,7 +86,7 @@
     --clr-gray-100: hsl(0, 2%, 79%);
     --clr-brand-400: hsl(25, 88%, 75%);
     --clr-brand-500: hsl(25, 88%, 66%);
-    /* --clr-green-300: hsl(143, ) */
+    --clr-green-300: hsl(143, 19%, 69%);
     --clr-green-400: hsl(143, 19%, 49%);
     --clr-green-500: hsl(143, 38%, 37%);
     --clr-green-600: hsl(145, 29%, 19%);
@@ -178,8 +178,6 @@
     font-family: var(--ff-body);
     line-height: 1.6;
     scroll-padding: 3rem;
-
-    /* scroll-behavior: smooth; */
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -229,6 +227,7 @@
   .flow > * + * {
     margin-top: var(--flow-spacer, 1em);
   }
+  /* same selector as above */
   /* .flow > :not(:first-child) {
     color: red;
   } */
@@ -281,13 +280,11 @@
 
   .wrapper {
     --wrapper-max-width: 1130px;
-    /* --wrapper-padding: 1rem; */
 
     max-width: var(--wrapper-max-width);
     margin-inline: auto;
     padding-inline: 1rem;
-    /* padding-inline: var(--wrapper-padding); */
-    /* helps to match the Figma file */
+
     box-sizing: content-box;
 
     &[data-width="wide"] {
@@ -488,7 +485,7 @@
       "card-four";
 
     @media (width > 600px) {
-      /* grid-template-columns: repeat(2, 1fr); */
+      grid-template-columns: repeat(2, 1fr);
       grid-template-areas:
         "card-one card-two"
         "card-three card-four";
@@ -605,10 +602,6 @@
       --tag-bg: var(--clr-orange-500);
     }
   }
-
-  /* .tag-list li {
-
-  } */
 
   .button {
     display: inline-flex;
